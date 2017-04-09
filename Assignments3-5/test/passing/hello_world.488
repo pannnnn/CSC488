@@ -1,0 +1,3 @@
+{
+    write "hello world!", newline, "CSC 488", newline
+}

@@ -1,0 +1,7 @@
+{
+    procedure greeting(a : Integer) {
+        write "hello ", a
+    }
+
+    greeting(123)
+}

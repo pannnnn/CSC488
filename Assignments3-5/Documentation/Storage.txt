@@ -1,0 +1,5 @@
+Storage
+
+Following the design we had in Assignment 4, how we stored our variable did not change much. In particular for each scope, we first allocate space for the scoping information such as return address, dynamic link, return value, etc and followed by attributes and local variables. Notice we initializes all integer values to 0 and all boolean values to MACHINE_FALSE automatically.
+
+However, what we've changed was whenever we enter a minor scope in a loop, we need to make space for two values, the dynamic link to its parent scope and the minor scope's exit address. This way, when we exit the minor scope, the display registers and the stack can be easily updated. For major scopes, we saved space for three values, the return value if applicable, the return address and dynamic link to previous activation record that occupied this lexical level. By following this implementation, we are able to do tail recursion where as previously we will lose the activation record for functions at the same lexical level.

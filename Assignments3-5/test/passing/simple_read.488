@@ -1,0 +1,7 @@
+{
+    var x, y : Integer
+
+    read x, y
+
+    write x, y
+}

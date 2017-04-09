@@ -1,0 +1,20 @@
+CompileTime
+
+We did not use the CodeGen provided in the starter code to remain consistency with the design in A4, where we stated that we will use a class called CompileTime to trace all the information needed during compile time.
+
+Since all AST nodes share one compile time, we made most of its variables and functions static. We have 3 public fields tracing compile time information.
+
+- instructionCounter:
+    Counting how many instructions are emitted.
+- fillInIC:
+    A list of addresses need to increment by the initPC.
+- majorScopeCount:
+    Counting how many major scopes are created.
+
+Meanwhile we have 2 static functions:
+- initMajorScope:
+    Initialize a major scope. Label it as a major scope and set assign it with a new unique lexical level.
+- finish:
+    Finish the code generation process by computing and setting the values of PC, MSP and MLP.
+
+Also we have a helper class Addr, wrapping the location of instructions and their value before initial program counter added. The address at memeory[location] will be later set to (value + initPC).

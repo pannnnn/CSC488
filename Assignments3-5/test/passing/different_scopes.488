@@ -1,0 +1,26 @@
+{
+    var x : Integer
+
+    x := 0
+    {
+        x:= 1
+        write x
+    }
+
+    {
+        x:= 2
+        write x
+    }
+
+    {
+        x:= 3
+        write x
+    }
+
+    {
+        x:= 4
+        write x
+    }
+
+    write x
+}

@@ -1,0 +1,4 @@
+{
+    if true then write "True", newline
+    if not false then write "False", newline
+}

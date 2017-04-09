@@ -1,0 +1,12 @@
+{
+    var x : Integer
+    x := 0
+    while true do {
+    	write "Inner loop starts", newline
+    	while true do {
+		    x := x + 1
+		    write x, newline
+		    exit 2 when x > 5
+    	}
+    }
+}

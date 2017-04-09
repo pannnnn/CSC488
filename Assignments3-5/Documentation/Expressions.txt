@@ -1,0 +1,10 @@
+Expressions
+
+The implementation of expressions is the same as the design in A4.
+For binary expressions, the left operand is generated recursively, then the right 
+operand is also generated recursively. The operator is then push onto the stack to 
+evaluate those two operand. Unary expressions are also generated the same way, 
+by generating the operand recursively and then pushing onto the stack the operator. 
+Since we are given EQ, we implemented 'not' by comparing the boolean value to MACHINE FALSE 
+to simulate NOT. Once we have NOT and since OR is given, then AND is implemented by using 
+demorgans law. Conditional expressions are implemented similar to if statements.

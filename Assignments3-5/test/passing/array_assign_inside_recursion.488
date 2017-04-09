@@ -1,0 +1,24 @@
+{
+    function fibonacci_variant(a : Integer) : Integer {
+        var x[2] : Integer
+        if a = 1 then return with 0
+        if a = 2 then return with 1
+        x[1] := fibonacci_variant(a-1)
+        x[2] := fibonacci_variant(a-2)
+        return with x[1] * x[2]
+    }
+
+    procedure print_fibonacci {
+        var i : Integer
+        var a : Integer
+        i := 1
+        a := 0
+        while (i < 6) do {
+            a := fibonacci_variant(i)
+            write a, newline
+            i := i + 1
+        }
+    }
+
+    print_fibonacci
+}

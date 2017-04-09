@@ -1,0 +1,17 @@
+{
+    var above : Integer
+    var x[-2..2] : Integer
+    var below : Integer
+
+    above := -999
+    x[-2] := -2
+    x[-1] := -1
+    x[0] := 0
+    x[1] := 1
+    x[2] := 2
+    below := 999
+
+    {
+        write above, newline, x[-2], newline, x[-1], newline, x[0], newline, x[1], newline, x[2], newline, below
+    }
+}

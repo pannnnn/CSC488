@@ -1,0 +1,36 @@
+Statements
+
+For the most part, our implementation of statements followed the designed in our A4.
+
+Assignment statements:
+We first get the address of the variable we want to assign using the display register
+and offsets, then we push the value we want to load on to the stack. Then we load...
+
+
+If statements:
+The condition of the if statement if first evaluated, then depending on the result
+we branch false to the else part (if any), if there is not else, then the branch would
+just be the first instruction after the if statement. If the condition evaluates to true, 
+the branch false would fail and we would execute the true statements of the if statement
+then we would branch to the first instruction after the if statement.
+
+
+Exit statements:
+For exit statements, we used the same data structure 'loopStack' as mentioned in A4,
+however, this time whenever we enter a minor scope we append an element to the loopStack,
+it contains information such as the number of variable that the current minor scope has,
+and whether it is a loop or not. When we exit, we add up the number of variables for each
+level we exit and pop off all variables from the stack when we exit from a loop. 
+
+While / Repeat statements:
+When entering into a minor scope, we save space for two variables on the runtime stack,
+on for the break address, the other for the address of the activation record of the parent
+scope, when we exit the loop, we clear the stack, branch to the break address, then we set 
+the display to the activation record of the parent.
+
+Read / write statements:
+For write statements, we do a loop for every character / value we have to write and write 
+it to the standard output.
+
+For read statements, we wait for an user input, then load the user input into variable similar
+to assignment statements.

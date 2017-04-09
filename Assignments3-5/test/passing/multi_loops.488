@@ -1,0 +1,30 @@
+{
+    var a, b, c, d, e, f : Integer
+
+    a := 0
+    b := 0
+    c := 0
+    d := 0
+    e := 0
+    f := 0
+
+    while a < 2 do {
+        while b < 2 do {
+            while c < 2 do {
+                while d < 2 do {
+                    while e < 2 do {
+                        while f < 2 do {
+                            write a, b, c, d, e, f, newline
+                            f := f + 1
+                        }
+                        e := e + 1
+                    }
+                    d := d + 1
+                }
+                c := c + 1
+            }
+            b := b + 1
+        }
+        a := a + 1
+    }
+}

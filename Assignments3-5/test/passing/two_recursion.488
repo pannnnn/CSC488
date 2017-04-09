@@ -1,0 +1,26 @@
+{
+
+    function fibonacci(a : Integer) : Integer {
+        if a = 1 then return with 0
+        if a = 2 then return with 1
+        return with fibonacci(a-1) + fibonacci(a-2)
+	}
+
+    function fibonacci_variant(a : Integer) : Integer {
+        var x[2] : Integer
+        if a = 1 then return with 0
+        if a = 2 then return with 1
+        x[1] := fibonacci(a-1)
+        x[2] := fibonacci(a-2)
+        return with x[1] * x[2]
+    }
+
+    var a : Integer
+    a := 5
+    repeat {
+    	write fibonacci(a) + fibonacci_variant(a), newline
+    	a := a + 1
+	} until (a > 5)
+
+	write a
+}

@@ -1,0 +1,15 @@
+{
+    var a, b, c, d : Boolean
+    procedure print_boolean(x : Boolean) {
+        if x then write "true", newline else write "false", newline
+    }
+    a := true and true
+    b := true and false
+    c := false and true
+    d := false and false
+
+    print_boolean(a)
+    print_boolean(b)
+    print_boolean(c)
+    print_boolean(d)
+}

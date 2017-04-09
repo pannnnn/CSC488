@@ -1,0 +1,14 @@
+{
+    function one : Integer {
+        return with 1
+    }
+
+    function factorial(n : Integer) : Integer {
+        if (n > 2) then
+            return with n * factorial(n - 1)
+        else
+            return with 1
+    }
+
+    write factorial(5)
+}

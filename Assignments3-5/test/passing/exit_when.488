@@ -1,0 +1,9 @@
+{
+    var x : Integer
+    x := 0
+    while true do {
+        x := x + 1
+        write x, newline
+        exit when x > 5
+    }
+}

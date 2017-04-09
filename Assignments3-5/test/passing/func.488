@@ -1,0 +1,25 @@
+{
+    function fibonacci(a : Integer) : Integer {
+        if a = 1 then return with 0
+        if a = 2 then return with 1
+        return with fibonacci(a-1) + fibonacci(a-2)
+    }
+
+    procedure print_fibonacci {
+        var i : Integer
+        var x[5] : Integer
+        x[1] := 0
+        x[2] := 0
+        x[3] := 0
+        x[4] := 0
+        x[5] := 0
+        i := 1
+        while (i < 6) do {
+            x[i] := fibonacci(i)
+            write x[i], newline
+            i := i + 1
+        }
+    }
+
+    print_fibonacci
+}

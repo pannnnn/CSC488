@@ -1,0 +1,5 @@
+{
+    function f : Integer {}
+    var a : Integer
+    a := f
+}

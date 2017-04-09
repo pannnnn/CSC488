@@ -1,0 +1,14 @@
+{
+    var x, y : Integer
+
+    x := 0
+    y := 0
+
+    while x < 10 do {
+        while y < 10 do {
+            write x, y, newline
+            y := y + 1
+        }
+        x := x + 1
+    }
+}

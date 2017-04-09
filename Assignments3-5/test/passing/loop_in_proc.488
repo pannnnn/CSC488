@@ -1,0 +1,12 @@
+{
+    procedure proc {
+        var i : Integer
+        i := 1
+        while (i < 5) do {
+            write i
+            i := i + 1
+        }
+    }
+
+    proc
+}

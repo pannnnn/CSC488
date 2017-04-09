@@ -1,0 +1,7 @@
+{
+    function add_one(a : Integer) : Integer {
+        return with a + 1
+    }
+
+    write add_one(1)
+}

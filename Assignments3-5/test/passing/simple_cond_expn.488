@@ -1,0 +1,4 @@
+{
+    write (true ? 1 : 0)
+    write (false ? 1 : 0)
+}

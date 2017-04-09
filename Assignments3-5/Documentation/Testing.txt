@@ -1,0 +1,151 @@
+Failing:
+    func_no_return:
+        a function with no return statement
+
+    infinite_recursion:
+        infinite recursion
+
+    overflow:
+        adding until overflow
+
+    too_many_major_scopes:
+        declare major scopes exceeding the number of display registers
+
+    underflow:
+        subtracting until overflow
+
+Passing:
+    and_expr:
+        logical and expression
+
+    array_assign_inside_recursion:
+        initialize array inside recursion function and then loop to call recursion function
+
+    basic_comp:
+        basic comparision operations
+
+    basic_expn:
+        write expressions
+
+    different_scopes:
+        many minor scopes inside one major scope
+
+    double_while_recursion:
+        two while loops and call recursion function each time insdie the loop
+
+    empty_scope:
+        empty scope
+
+    eq_expn:
+        equal operation
+
+    exit:
+        single while loop with exit
+
+    exit_level_1:
+        jump out of one while loop
+
+    exit_level_2:
+        jump out of two while loop
+
+    exit_level_when:
+        exit while loop with condition
+
+    func:
+        procedure call recursion function and do array operations inside procedure
+
+    ge_expr:
+        greater than or equal to operation
+
+    gt_expr:
+        greater than operation
+
+    hello_world:
+        :D
+
+    proc_return:
+        return from a procedure
+
+    le_expr:
+        less than or equal to expression
+
+    loop_in_proc:
+        loop inside procedure
+
+    lt_expr:
+        less than expression
+
+    minor_scope_array:
+        array initialization and assignment, then in minor scope get values from array
+
+    multi_loops:
+        nested while loop
+
+    no_attr_func:
+        function with no parameters
+
+    not_expr:
+        logical not expression
+
+    or_expr:
+        logical or expression
+
+    print_99:
+        print 99 times of two integers
+
+    proc:
+        call procedure which call a recursion function
+
+    recursion_inside_loop:
+        call recursion inside repeat loops
+
+    recursion_with_while_exit:
+        call recursion inside while loop with exit
+
+    recursive_func:
+        simple recursive function
+
+    recursive_inside_loop:
+        call procedure to repeatedly call recursion function
+
+    recursive_proc:
+        simple recursive procedure
+
+    recursive_with_while_exit1:
+        exit in the inner while loop of the recursive function
+    
+    recursive_with_while_exit2:
+        exit in the outer while loop of the recursive function
+
+    simple_cond_expn:
+        simple conditional expression
+
+    simple_decl:
+        simple declaration
+
+    simple_func:
+        simple function
+
+    simple_if_then:
+        simple if then statement
+
+    simple_if_then_else:
+        simple if then else statement
+
+    simple_proc:
+        simple procedure
+
+    simple_read:
+        simple read statement
+
+    simple_repeat:
+        simple repeat statement
+
+    simple_while:
+        simple while loop
+
+    two_recursion:
+        call two recursions in the major scope
+
+    while_statement:
+        while statement with recursions

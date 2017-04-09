@@ -1,0 +1,26 @@
+{
+    var a,b,c,d,e,f,g : Boolean
+    procedure print_boolean(x : Boolean) {
+        if x then write "true", newline else write "false", newline
+    }
+    var x,y : Integer
+
+    x := 0
+    y := 10
+
+    a := 1 < 2
+    b := 1 > 2
+    c := x < y
+    d := 1 = 2
+    e := 1 not= 2
+    f := 1 >= 2
+    g := 1 <= 2
+
+    print_boolean(a)
+    print_boolean(b)
+    print_boolean(c)
+    print_boolean(d)
+    print_boolean(e)
+    print_boolean(f)
+    print_boolean(g)
+}

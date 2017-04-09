@@ -1,0 +1,7 @@
+{
+    procedure rec {
+        rec
+    }
+
+    rec
+}

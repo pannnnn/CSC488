@@ -1,0 +1,24 @@
+{
+    function fibonacci(a : Integer) : Integer {
+        if a = 1 then return with 0
+        if a = 2 then return with 1
+        return with fibonacci(a-1) + fibonacci(a-2)
+    }
+
+    procedure print_fibonacci {
+        var i : Integer
+        var j : Integer
+        i := 1
+        j := 1
+        while (true) do {
+            while (true) do{
+                write fibonacci(j), newline
+                j := j + 1
+                exit 2 when ( j = 5 )
+            }
+            i := i + 1
+        }
+    }
+
+    print_fibonacci
+}

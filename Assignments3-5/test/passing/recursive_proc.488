@@ -1,0 +1,9 @@
+{
+    procedure f(b : Integer) {
+        write b, " "
+        if (b < 10) then
+            f(b + 1)
+    }
+
+    f(1)
+}

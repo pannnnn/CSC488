@@ -1,0 +1,15 @@
+{
+    var x : Integer
+
+    x := 99
+
+    {
+        function fibonacci(a : Integer) : Integer {
+            if a = 1 then return with 0
+            if a = 2 then return with 1
+            return with fibonacci(a-1) + fibonacci(a-2)
+        }
+
+        write fibonacci(5)
+    }
+}

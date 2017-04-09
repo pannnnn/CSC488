@@ -1,0 +1,18 @@
+{
+    function fibonacci(a : Integer) : Integer {
+        if a = 1 then return with 0
+        if a = 2 then return with 1
+        return with fibonacci(a-1) + fibonacci(a-2)
+    }
+
+    procedure loop_rec(a : Integer) {
+        var i : Integer
+        i := 1
+        repeat {
+            write fibonacci(i), newline
+            i := i + 1
+        } until (i > 5)
+    }
+
+    loop_rec(5)
+}

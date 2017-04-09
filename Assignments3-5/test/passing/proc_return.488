@@ -1,0 +1,9 @@
+{
+    procedure f {
+        write "this should be printed"
+        return
+        write "this should not be printed"
+    }
+
+    f
+}

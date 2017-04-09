@@ -1,0 +1,10 @@
+{
+    var x, y, z: Integer
+    var a[2]: Integer
+    var r, s, t: Integer
+
+    y := 1 + 2
+    x := y
+    z := x + y
+    write x, newline, y, newline, z
+}

@@ -1,0 +1,24 @@
+Functions and Procedures
+
+parameter passing
+    Upon a function call, we generate all arguments of the arguments passed in one by one and they will be pushed onto the stack, right after the return value, return address, and dynamic link to previous display.
+
+display & addressing
+    We changed our design of the usage of display to the most conventional way. Namely using display[0] to store the activation record address of main scopes and minor scopes and display[1..31] to store activation records of each kinds of major scopes.
+
+    When addressing a variable, we will first compute its address by ``ADDR, current scope's lexical level, the variable's offset. Addressing return address is mentioned in later in the return section.
+
+local storage
+    first 3 slots on the activation record are the return value, return address and dynamic link pointing to previous display we overwrote. Then followed by the arguments passed in, finally all variables inherited from parent scope and newly created locally.
+
+embedded scopes & call of function/procedure
+    All scopes are created in the following way:
+        enter scope -> (generate routines, if any) -> generate statements -> exit scope
+    However, the code for function/procedure calls are different. During the routine call, we create spaces for return value, return address and dynamic link according to the scope where the routine is called. Unlike minor scopes we can always be sure where the scope is created and just use its parent scope as reference. Then we finish entering the major scope like other minor scopes. And we did not include exit scope instructions for functions. Since every function should properly return by a return with statement, we can just ignore the case where no return with statement exists and keep that responsible for the coder. Exiting a procedure's scope is however different. We need to first pop all the variables and attributes. Then we will have 3 slots of memory remaining on the stack: an UNDEFINED as the padding to keep major scopes at the same size, the dynamic link and the return address. Thus we need to pop one more, then restore the display to the dynamic link and finally branch to the return address.
+
+return
+    PROCEDURE
+    Return statements is the same as exiting the major scope. So we just call scope.generateExitScope().
+
+    FUNCTION
+    Return statements are similar to exit statements. After we pop off the variables and attributes, there are still three variables left on the stack. One for return value (is UNDEFINED before returning), return address and the dynamic link to the previous activation record of the lexical level. So we first store the return value into the return value slot, then restore the display address to the dynamic link and branch to the return address. After branching from the location we will have the return value staying on the top of the stack and thus evaluating the result of the function call expression.
